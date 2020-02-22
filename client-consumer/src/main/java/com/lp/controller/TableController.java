@@ -63,4 +63,26 @@ public class TableController {
         return "over2";
     }
 
+    /**
+     * seata分布式事务，2个表都插入
+     * @return
+     */
+    @GlobalTransactional(name = "mybatis_tx_NO2",rollbackFor = Exception.class)
+    @RequestMapping("/test3")
+    @ResponseBody
+    public String test3(){
+        //table1正常
+        Table1 table1 = new Table1();
+        table1.setId(3);
+        table1.setName("3");
+        table1.setContext("3");
+        this.table1Feign.ins(table1);
+        //table2正常
+        Table2 table2 = new Table2();
+        table2.setId(3);
+        table2.setName("3");
+        table2.setContent("3");
+        this.table2Feign.ins(table2);
+        return "over3";
+    }
 }

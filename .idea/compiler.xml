@@ -12,8 +12,10 @@
         <module name="table1-producer" />
         <module name="eureka-server-ha" />
         <module name="client-consumer" />
+        <module name="nacos-table1-service" />
         <module name="generator-config" />
         <module name="seata" />
+        <module name="nacos-table2-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -23,6 +25,8 @@
       <module name="commons" options="-parameters" />
       <module name="eureka-server-ha" options="-parameters" />
       <module name="generator-config" options="-parameters" />
+      <module name="nacos-table1-service" options="-parameters" />
+      <module name="nacos-table2-service" options="-parameters" />
       <module name="seata" options="-parameters" />
       <module name="seata-samples" options="-parameters" />
       <module name="table-pojo" options="-parameters" />
